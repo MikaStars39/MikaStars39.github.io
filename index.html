@@ -5,10 +5,12 @@
     <title>StarsGallery</title>
     <style>
         body {
-            background-color: #003366; /* 克莱因蓝底色 */
+            background-image: url("https://en.wikipedia.org/wiki/International_Klein_Blue"); /* 网络上图片的URL地址 */
+            background-size: cover;
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -18,10 +20,22 @@
             color: white; /* 白色文字 */
             font-size: 48px;
             font-family: Arial, sans-serif;
+            margin-bottom: 20px; /* 添加底边距，用于放置超链接 */
+        }
+
+        a {
+            color: white; /* 白色链接文字 */
+            text-decoration: none;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
     <h1>StarsGallery</h1>
+    <a href="#">Profile</a>
+    <a href="#">Publication</a>
+    <a href="#">Connection</a>
 </body>
 </html>
