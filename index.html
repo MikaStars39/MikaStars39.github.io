@@ -1,206 +1,240 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta content="This page is made by Qingyu Yin @ZJU">
-  <title>MikaStars' Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qingyu Yin's Academic Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      background-color: white;
-    }
-    .body_style {
-
-    }
-    .logo {
-      width: 40px;
-      display: inline-block;
-    }
-    .title_logo {
-      margin: 10px 10px 15px 20px;
-      display: inline-block;
-      vertical-align: top;
-    }
-    .title {
-      color: #3d3f41;
-      font-size: 30px;
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-      text-align: left;
-      margin: 15px 10px 10px 350px;
-      display: inline-block;
-      vertical-align: top;
-    }
-    .github_link {
-      font-size: 15px;
-      display: inline-block;
-      float: right;
-      margin: 25px 40px 10px 5px;
-      vertical-align: auto;
-    }
-    a.link_border {
-      text-decoration: none;
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-      border-color: #3d3f41;
-      border-width: 2px;
-      border-radius: 10px;
-      padding: 3px;
-      border-style: solid;
-      background-color: whitesmoke;
-      color: #3d3f41;
-    }
-    a:hover.link_border {
-
-      text-decoration: none;
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-      border-color: dimgray;
-      border-width: 2px;
-      border-radius: 10px;
-      padding: 3px;
-      border-style: solid;
-      background-color: whitesmoke;
-      color: dimgray;
-    }
-    hr {
-
-    }
-    .aside_right {
-      float: right;
-      background-color: dimgray;
-    }
-    .nav {
-      display: inline-block;
-      float: top;
-      margin: 25px 4px 10px 120px;
-      vertical-align: auto;
-    }
-    .nav_main ul li {
-      list-style: none;
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-      font-size:17px;
-      width: 150px;
-    }
-    ul.nav_list {
-      list-style: none;
+    /* 容器样式 */
+    .container {
       justify-content: center;
-      float: contour;
       display: flex;
+      align-items: center; /* 垂直居中 */
     }
-    div.left_aside {
-      float:left;
-      background-color: white;
-      margin: 0 40px 10px 30px;
-      text-align: center;
-      text-decoration: none;
+
+    /* 照片样式 */
+    .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-right: 20px; /* 或更多的间距，根据需要调整 */
+      margin-left: -10px; /* 或根据需要调整以稍微向左移动图片 */
     }
-    h4.visit {
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-      font-size: 15px;
+
+    /* 名字和信息样式 */
+    .info {
       text-align: left;
-      background-color: white;
-      margin: 10px 10px 10px 10px;
     }
-    a.aside_a {
-      background-color: white;
+
+    /* 如果有需要，您还可以为名字、学位等添加单独的样式来微调间距、字体大小等 */
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+
+    #name {
+      font-size: 40px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    #degree, #lab {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #555555;
+    }
+
+    #navbar {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    #navbar a {
+      margin: 0 15px;
       text-decoration: none;
-      color:#2d2d2d;
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: #555555; /*深灰色*/
     }
-    a:hover.aside_a {
-      background-color: white;
+
+    #navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      font-weight: 400;
+      margin-top: 40px;
+      font-size: 40px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    .section-title1 {
+      font-weight: 400;
+      font-size: 40px;
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+
+    .section-content {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    .content-box {
+      width: 80%;
+      font-size: 15px;
+      color: #555555;
+      padding: 17px;
+      margin: 15px auto;
+      line-height: 1.5;
+      font-family: 'Open Sans', sans-serif;
+      text-align: left;
+    }
+
+    .links a {
       text-decoration: none;
-      color: black;
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+      font-weight: bold;
+      font-size:13px;
+      color: darkgrey; /* LinkedIn蓝色，您可以选择您喜欢的颜色 */
+      margin-right: 5px; /* 超链接之间的距离 */
     }
-    main.main_style {
-      margin: 10px 30px 30px 30px;
-      padding: 20px;
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+
+    .links a:hover {
+      text-decoration: underline;
     }
-    p.p_text {
-      font-size: 18px;
-    }
-    div.p_main_text {
-      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-      font-size: 18px;
-      margin: 0 100px 40px 205px ;
-    }
-    span.span_style {
-      background-color: white;
-      font-weight: bolder;
-      font-family: "Apple SD Gothic Neo", sans-serif;
-    }
-    a.nav_a {
-      text-decoration: none;
-      color: #3d3f41;
-      font-weight: bolder;
-    }
+
+
+
+
   </style>
 </head>
-<body class="body_style">
-<div class="title">
-  <strong> MikaStars' Blog </strong>
+
+
+
+<body>
+<div class="container">
+  <img src="yqy.jpg" alt="Person's photo" class="photo">
+  <div class="info">
+    <h2 id="name">Qingyu Yin</h2>
+    <p id="degree">B.A. in English (Linguistics) & Computer Science
+      <br>
+      Zhejiang University
+      <br>
+      Hangzhou Innovation Center AI Lab
+    </p>
+    <div class="links">
+      <a href="https://github.com/MikaStars39" target="_blank">GitHub</a>
+      <a href="mailto:meloxdmy@qq.com">Email</a>
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+      <a href="https://www.zhihu.com/people/manimani-47" target="_blank">Zhihu</a>
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+
+  </div>
 </div>
-<div class="nav">
-  <nav class="nav_main">
-    <ul class="nav_list">
-      <li> <a class="nav_a" href=Qingyu_Yin_ZJU_Resume.pdf"> Profile </a> </li>
-      <li> <a class="nav_a" href="https://scholar.google.com"> Pubs </a> </li>
-      <li> <a class="nav_a" href="https://www.pixiv.net/users/33993455"> Gallery </a> </li>
-    </ul>
-  </nav>
+
+
+
+<div id="navbar">
+  <a href="#">HOME</a>
+  <a href="#">ABOUT ME</a>
+  <a href="#">LATEST NEWS</a>
+  <a href="#">PUBLICATIONS</a>
+  <a href="#">PROJECTS</a>
+  <a href="#">CV</a>
+  <a href="#">NOTES</a>
 </div>
-<div class="github_link">
-  <a class="link_border" href="https://github.com/MikaStars39"> <strong>visit my github </strong> </a>
+
+<!-- Sample Sections -->
+<div class="section-title1">ABOUT ME</div>
+<div class="content-box">
+  Hi there! My name is Qingyu Yin , and I am an undergraduate student from Zhejiang University, class of 2022.
+  I am currently pursuing a dual degree in English and Computer Science. I am now under the guidance of Prof. Qiang Zhang .
+  <br> <br>
+  My research interests lie at the intersection of Natural Language Processing its applications in Bioinformatics ,
+  as well as utilizing machine learning techniques to advance scientific research in the field of AI for Science - AI4Science .
+  My work is dedicated to discovering more efficient LLM infrastructure and developing a universal framework
+  suitable for various downstream task scenarios, while exploring the interpretability of these models.
+  I also have some research in genomics and transcriptomics, and am exploring how to use AI tools to accelerate
+  scientific discoveries in related fields.
+  <br> <br>
+  At present, I am fortunate to be interning at the HIC-ZJU Laboratory of Biological and Molecular Intelligence.
+  <br>
+
 </div>
-<div class="left_aside">
-  <img class="logo" src="https://raw.githubusercontent.com/MikaStars39/MikaStars39.github.io/main/yqy.jpg" alt="" style="width: 280px; height: auto;">
-  <h4 class="visit">
-    <strong> Zhejiang University</strong> <br>
-     School of International Study <br>
-     Hangzhou Innovation Center (ZJU-HIC) <br> <br>
-    <a href="mailto:meloxdmy@qq.com" style="text-decoration: none;"> ✉️ Email</a> <br>
-    <a href="https://huggingface.co/MikaStars39" style="text-decoration: none;"> 😊 Huggingface</a> <br>
-    <a href="https://scholar.google.com" style="text-decoration: none;"> 📑 Google Scholar</a> <br>
-    <a href="https://zjuers.com" style="text-decoration: none;">🏫 ZJU light page </a> <br> <br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-  </h4>
+
+<div class="section-title1">LATEST NEWS</div>
+<div class="content-box">
+
+  <strong>2023.9.29</strong> <br>
+  Our paper <strong>DLCNet: Enabling Data-Dependency into Long-Range Convolution</strong> has been submitted to <strong>ICLR 2024</strong>!
+  <br> <br>
+
+  <strong>2023.7.19</strong> <br>
+  Talking with Prof. Jiannong Cao's team from Hongkong Polytechnique University
+  <br> <br>
+
+  <strong>2023.7.8 - 2023.7.9</strong> <br>
+  Joined WAIC 2023, Automation Intelligence Molecular Manufacturing Conference and 'AI+Chemistry and Chemical Engineering' Sub-forum as a visitor
+  <br> <br>
+
+  <strong>2023.3</strong> <br>
+  Joined HIC-ZJU Prof. Qiang Zhang's Lab as an intern student
+  <br> <br>
+
+  <strong>2022.9</strong> <br>
+  Freshman of ZJU Class of 2022
+  <br> <br>
+
+  <strong>2020.10 - 2020.12</strong> <br>
+  Got award of NOIP Shandong Second Prize, top 200 <br>
+  Got award of CSP Shandong Second Prize <br>
+  Got award of NOIP Zibo First Prize, top 5 <br>
+  <br>
+
 </div>
-<main class="main_style">
-  <h2> Welcome to Qingyu Yin's Blog!</h2>
-    <br> <br>
-  <p class="p_text">Hi there! My name is <strong> Qingyu Yin </strong>, and I am an undergraduate student from Zhejiang University, class of 2022. I am currently pursuing a dual degree in English and Computer Science.</p>
-    <br>
-  <p class="p_text">My research interests lie at the intersection of  <strong> Natural Language Processing </strong> its applications in <strong>Bioinformatics</strong> , as well as utilizing machine learning techniques to advance scientific research in the field of AI for Science - <strong> AI4Science </strong>.</p>
-    <br>
-    <p class="p_text">At present, I am fortunate to be interning at the <strong> HIC-ZJU </strong> Laboratory of Biological and Molecular Intelligence. <br> I am now under the guidance of  <strong> Prof. Qiang Zhang  </strong>.</p>
-    <br>
-</main>
-<div class="p_main_text">
-  <h2> Recent Activities </h2> <br>
-  <h4> 2023.7.19 </h4>
-  <p style="font-size: 16px">
-    Talking with Prof. Jiannong Cao's team from Hongkong Polytechnique University
-  </p> <br>
-  <h4> 2023.7.8 - 2023.7.9 </h4>
-  <p style="font-size: 16px">
-    Joined WAIC 2023, Automation Intelligence Molecular Manufacturing Conference
-    and 'AI+Chemistry and Chemical Engineering' Sub-forum as a visitor
-  </p> <br>
-  <h4> 2023.3 </h4>
-  <p style="font-size: 16px">
-    Joined HIC-ZJU Prof. Qiang Zhang's Lab as an intern student
-  </p> <br>
-  <h4> 2022.9 </h4>
-  <p style="font-size: 16px">
-    Freshman of ZJU Class of 2022
-  </p> <br>
-  <h4> 2020.10 - 2020.12 </h4>
-  <p style="font-size: 16px">
-    Got award of NOIP Shandong Second Prize, top 200 <br>
-    Got award of CSP Shandong Second Prize <br>
-    Got award of NOIP Zibo First Prize, top 5
-  </p> <br>
+
+
+
+<div class="section-title1">PUBLICATIONS</div>
+
+<div class="content-box">
+  <strong>DLCNet: Enabling Data-Dependency into Long-Range Convolution</strong>  <strong> - ICLR 2024</strong><br>
+  In recent years, the Transformer architecture and self-attention mechanism have become the first choice for sequence modeling, but they encounter significant computational challenges when processing lengthy sequences. Long-range convolution has emerged as a promising alternative to self-attention, offering distinct advantages across various domains. However, current long-range convolution architectures still face several issues, such as excessive parameter usage and limited in-context learning capabilities. To tackle these challenges, we propose a Data-dependent Long-range Convolution Network (DLCNet) that introduces data dependency through three key modules: Layer-Wise Mapping, Rectify SideNet, and SWEAP Operator. DLCNet effectively facilitates in-context learning within a reasonable parameter scale. Extensive experiments have demonstrated that DLCNet surpasses the state-of-the-art baselines in processing lengthy sequences, even when trained with short sequences.
+  <br> <br>
+
+
+
 </div>
+
+<div class="section-title1">PROJECTS</div>
+<div class="content-box">
+  <strong>MiniChatGPT</strong>  <strong></strong><br>
+  We designed a web-based ChatGPT interface program using Python, JavaScript, and MySQL. It includes features such as hotword search and data storage. Our project has successfully passed the course's evaluation.
+   <br> <br>
+  <strong>OneAPI-based DeepLearning Architecture</strong>  <strong></strong><br>
+  Inter oneAPI competition: We designed an efficient matrix multiplication acceleration algorithm and neural network infrastructure based on Intel's oneAPI. Using our architecture, we have implemented quality detection for red wine.
+  Collaborated with Shaojun Si (SDU)
+  <br> <br>
+
+</div>
+
+
+<div class="section-title1">NOTES</div>
+<div class="content-box">
+
+
+</div>
+
 </body>
+
 </html>
