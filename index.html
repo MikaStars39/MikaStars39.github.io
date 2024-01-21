@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" type="ico.png">
+  <link rel="shortcut icon"  type="icp.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qingyu Yin's Academic Site</title>
+  <title>MikaStars39</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     /* 容器样式 */
     .container {
@@ -20,7 +23,7 @@
     .photo {
       width: 200px;
       height: 200px;
-      border-radius: 50%;
+      border-radius: 10%;
       margin-right: 20px; /* 或更多的间距，根据需要调整 */
       margin-left: -10px; /* 或根据需要调整以稍微向左移动图片 */
     }
@@ -30,33 +33,28 @@
       text-align: left;
     }
 
-    /* 如果有需要，您还可以为名字、学位等添加单独的样式来微调间距、字体大小等 */
 
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-weight: 400;
       text-align: center;
       padding: 50px 0;
     }
 
-
-    #name {
-      font-size: 40px;
-      margin-top: 10px;
-      font-weight: 500;
+    .name {
+      font-size: 25px;
+      font-weight:400;
+      text-align: center;
     }
 
     #degree, #lab {
-      font-size: 16px;
-      margin-top: 0;
-      color: #555555;
+      font-size: 30px;
+      font-weight:300;
     }
 
     #navbar {
-      margin-top: 60px;
-      font-family: sans-serif;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
+      margin-top: 30px;
+      font-family: 'Raleway', sans-serif;
       padding: 10px 0;
       font-size: 12px;
       letter-spacing: 2px;
@@ -67,19 +65,10 @@
       margin: 0 30px;
       text-decoration: none;
       color: #555555; /*深灰色*/
-
     }
 
     #navbar a:hover {
       text-decoration: underline;
-    }
-
-    .section-title {
-      font-weight: 400;
-      margin-top: 40px;
-      font-size: 40px;
-      border-top: 1px solid #ddd;
-      padding-top: 20px;
     }
 
     .section-title1 {
@@ -89,19 +78,42 @@
       padding-top: 20px;
     }
 
-    .section-content {
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
-
     .content-box {
-      width: 60%;
+      width: 70%;
       font-size: 15px;
       color: #555555;
       padding: 17px;
-      margin: 15px 0 0 20%;
+      margin: 15px 0 0 15%;
       line-height: 1.5;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Raleway', sans-serif;
+      text-align: left;
+    }
+
+    .about-me {
+      flex-grow: 7; /* 左侧div将增长的空间 */
+      flex-shrink: 1; /* 左侧div将缩减的空间 */
+      flex-basis: 70%; /* 左侧div基础占据30%的空间 */
+      width: 40%;
+      font-size: 15px;
+      color: #555555;
+      padding: 17px;
+      margin: 5px 10% 5px 0;
+      line-height: 1.5;
+      font-family: 'Raleway', sans-serif;
+      text-align: left;
+    }
+
+    .news {
+      flex-grow: 3; /* 左侧div将增长的空间 */
+      flex-shrink: 1; /* 左侧div将缩减的空间 */
+      flex-basis: 15%; /* 左侧div基础占据30%的空间 */
+      width: 30%;
+      font-size: 15px;
+      color: #555555;
+      padding: 17px;
+      margin: 5px 0 0 15%;
+      line-height: 1.5;
+      font-family: 'Raleway', sans-serif;
       text-align: left;
     }
 
@@ -109,16 +121,40 @@
       text-decoration: none;
       font-weight: bold;
       font-size:13px;
-      color: darkgrey; /* LinkedIn蓝色，您可以选择您喜欢的颜色 */
-      margin-right: 5px; /* 超链接之间的距离 */
+      font-family: 'Raleway', sans-serif;
+      color: #555555; /* LinkedIn蓝色，您可以选择您喜欢的颜色 */
+      margin-right: 10px; /* 超链接之间的距离 */
     }
 
     .links a:hover {
       text-decoration: underline;
     }
 
+    .flex-container {
+      display: flex;
+    }
 
+    .centered-text {
+      width: 80%;
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center; /* 垂直居中 */
+    }
+    .right-text {
+      width: 20%;
+      display: flex;
+      justify-content: right; /* 水平居中 */
+      align-items: right; /* 垂直居中 */
+    }
 
+    a {
+      color: darkred; /* 设置超链接颜色为蓝色 */
+      text-decoration: none;
+    }
+    a:hover {
+      color: darkred; /* 设置超链接颜色为蓝色 */
+      text-decoration: underline;
+    }
 
   </style>
 </head>
@@ -127,13 +163,15 @@
 
 <body>
 <div class="container">
-  <img src="yqy.png" alt="Person's photo" class="photo">
+  <img src="personal.jpg" alt="Person's photo" class="photo">
   <div class="info">
-    <h2 id="name">Qingyu Yin</h2>
-    <p id="degree">B.A. in English / Linguistics / Computer Science
+    <p id="degree">
+      <span style="font-size: 50px; font-weight: 450;">Qingyu Yin</span> <br>
+      Bachelor in English and Computer Science
       <br>
-      Zhejiang University, HIC-AILab
-
+      Devoted to LLM Architecture and Machine Learning System
+      <br>
+      Zhejiang University, Hangzhou Innovation Center AI Lab
     </p>
     <div class="links">
       <a href="https://github.com/MikaStars39" target="_blank">GitHub</a>
@@ -146,60 +184,110 @@
   </div>
 </div>
 
-
-
 <div id="navbar">
   <a href="#">HOME</a>
-  <a href="#">ABOUT ME</a>
-  <a href="#">LATEST NEWS</a>
+  <a href="#">PROFILE</a>
+  <a href="#">ALL NEWS</a>
   <a href="#">PUBLICATIONS</a>
   <a href="#">PROJECTS</a>
   <a href="#">CV</a>
-  <a href="#">NOTES</a>
 </div>
 
-<!-- Sample Sections -->
-<div class="section-title1">ABOUT ME</div>
+<div class="flex-container">
+<!--  <div class="section-title1">ABOUT ME</div>-->
+  <div class="news">
+    <span style="font-size: 17px; font-weight: bold; color: black; align-content: center">Latest News </span>
+    <br>
+    <strong>20 / 1 / 2024</strong> <br>
+    We have launched a review focused on the field of ScienceLLM!
+    See Scientific Large Language Models: A Survey on Biochemical Domain.
+    <br> <br>
+    <strong>29 / 9 / 2023</strong> <br>
+    Our paper DLCNet: Enabling Data-Dependency into Long-Range Convolution has been submitted to ICLR 2024!
+    <br> <br>
+    <strong><a href="#">all news</a></strong>
+
+
+  </div>
+  <div class="about-me">
+    <span style="font-size: 17px; font-weight: bold; color: black; align-content: center">About Me </span> <br>
+    Hi there! My name is Qingyu Yin, and I am an undergraduate student from <a href="https://www.zju.edu.cn">Zhejiang University</a>, class of 2022.
+    I am currently pursuing a dual degree in English and Computer Science. At present, I am fortunate to be interning
+    at the <a href="https://hic.zju.edu.cn">HIC</a> AI Lab with Prof. Qiang Zhang as my tutor. I'm also
+    collaborating with Prof. Xiaoyu Shen from <a href="https://www.eitech.edu.cn">East Institute of Technology, Ningbo</a>.
+    <br>
+    <br>
+    My research interests lie at (1) advanced architectures designed for future LLM,
+    as well as (2) utilizing machine learning system techniques (hardware-efficient algorithm, cuda kernels, etc.) to advance scientific research in the field of LLM architecture .
+    My work is dedicated to discovering more efficient LLM infrastructure and developing a universal framework
+    suitable for various downstream task scenarios, while exploring the interpretability of these models.
+    <br> <br>
+    I also focus on genomics and transcriptomics, and am exploring how to use AI tools to accelerate
+    scientific discoveries in related fields.
+    <br> <br> <br>
+
+    <div class="centered-text">
+      Leap into that sea of light.  <br> 跃入那光那海 <br>
+      <div class="right-text">
+        --- Sonny Boy
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="section-title1">PUBLICATIONS</div>
 <div class="content-box">
-  Hi there! My name is Qingyu Yin , and I am an undergraduate student from Zhejiang University, class of 2022.
-  I am currently pursuing a dual degree in English and Computer Science. I am now under the guidance of Prof. Qiang Zhang .
-  <br> <br>
-  My research interests lie at the intersection of Natural Language Processing with its applications in Bioinformatics ,
-  as well as utilizing machine learning techniques to advance scientific research in the field of AI for Science - AI4Science .
-  My work is dedicated to discovering more efficient LLM infrastructure and developing a universal framework
-  suitable for various downstream task scenarios, while exploring the interpretability of these models.
-  I also have some research in genomics and transcriptomics, and am exploring how to use AI tools to accelerate
-  scientific discoveries in related fields.
-  <br> <br>
-  At present, I am fortunate to be interning at the HIC Laboratory of Biological and Molecular Intelligence.
+  <strong><a>Scientific Large Language Models: A Survey on Biochemical Domain</a></strong>
   <br>
-
+  Qiang Zhang*, Keyan Ding*, Tianwen Lyu, Xinda Wang, <strong>Qingyu Yin</strong>, Yiwen Zhang,
+  Jing Yu, Zhouyi Xiang, Xiang Zhuang, Zeyuan Wang, Mengyao Zhang, Ming Qin, Renjun Xu, Huajun Chen†
+  <br>
+  <a href="https://arxiv.org/abs/">[ArXiv]</a>
+  <a href="https://github.com/HICAI-ZJU/Scientific-LLM-Survey">[Github]</a>
+  <br>
+  Large Language Models (LLMs) have emerged as a transformative power in enhancing natural language comprehension, representing
+  a significant stride toward artificial general intelligence...
+   <br> <br>
+  <strong><a>DLCNet: Enabling Data-Dependency into Long-Range Convolution <br> [ICLR 2024]</a></strong>
+  <br>
+  <strong>Qingyu Yin*</strong>, Xiang Zhuang, Qiang Zhang†, Keyan Ding†
+  <br>
+  <a href="https://openreview.net/forum?id=YPOcBR9h2a&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2024%2FConference%2FAuthors%23your-submissions)">[OpenReview]</a>
+  <br>
+  In recent years, the Transformer architecture and self-attention mechanism have become the first choice for sequence modeling, but they encounter significant computational challenges when processing lengthy sequences. Long-range convolution has emerged as a promising alternative to self-attention, offering distinct advantages across various domains...
 </div>
 
-<div class="section-title1">LATEST NEWS</div>
+<div class="section-title1">ALL NEWS</div>
 <div class="content-box">
 
-  <strong>2023.9.29</strong> <br>
+  <strong>20 / 1 / 2024</strong> <br>
+  We have launched a review focused on the field of ScienceLLM!
+  See Scientific Large Language Models: A Survey on Biochemical Domain.
+  <br> <br>
+
+  <strong>29 / 9 / 2023</strong> <br>
   Our paper <strong>DLCNet: Enabling Data-Dependency into Long-Range Convolution</strong> has been submitted to <strong>ICLR 2024</strong>!
   <br> <br>
 
-  <strong>2023.7.19</strong> <br>
+  <strong>19 / 7 / 2023</strong> <br>
   Talking with Prof. Jiannong Cao's team from Hongkong Polytechnique University
   <br> <br>
 
-  <strong>2023.7.8 - 2023.7.9</strong> <br>
+  <strong>8 / 7 / 2023</strong> <br>
   Joined WAIC 2023, Automation Intelligence Molecular Manufacturing Conference and 'AI+Chemistry and Chemical Engineering' Sub-forum as a visitor
   <br> <br>
 
-  <strong>2023.3</strong> <br>
+  <strong>10 / 3 / 2023</strong> <br>
   Joined HIC-ZJU Prof. Qiang Zhang's Lab as an intern student
   <br> <br>
 
-  <strong>2022.9</strong> <br>
+  <strong>1 / 9 / 2022</strong> <br>
   Freshman of ZJU Class of 2022
   <br> <br>
 
-  <strong>2020.10 - 2020.12</strong> <br>
+  <strong>20 / 10 / 2020</strong> <br>
   Got award of NOIP Shandong Second Prize, top 200 <br>
   Got award of CSP Shandong Second Prize <br>
   Got award of NOIP Zibo First Prize, top 5 <br>
@@ -208,35 +296,17 @@
 </div>
 
 
-
-<div class="section-title1">PUBLICATIONS</div>
-
-<div class="content-box">
-  <strong>DLCNet: Enabling Data-Dependency into Long-Range Convolution</strong>  <strong> - ICLR 2024</strong><br>
-  In recent years, the Transformer architecture and self-attention mechanism have become the first choice for sequence modeling, but they encounter significant computational challenges when processing lengthy sequences. Long-range convolution has emerged as a promising alternative to self-attention, offering distinct advantages across various domains. However, current long-range convolution architectures still face several issues, such as excessive parameter usage and limited in-context learning capabilities. To tackle these challenges, we propose a Data-dependent Long-range Convolution Network (DLCNet) that introduces data dependency through three key modules: Layer-Wise Mapping, Rectify SideNet, and SWEAP Operator. DLCNet effectively facilitates in-context learning within a reasonable parameter scale. Extensive experiments have demonstrated that DLCNet surpasses the state-of-the-art baselines in processing lengthy sequences, even when trained with short sequences.
-  <br> <br>
-
-
-
 </div>
 
 <div class="section-title1">PROJECTS</div>
 <div class="content-box">
   <strong>MiniChatGPT</strong>  <strong></strong><br>
   We designed a web-based ChatGPT interface program using Python, JavaScript, and MySQL. It includes features such as hotword search and data storage. Our project has successfully passed the course's evaluation.
-   <br> <br>
+  <br> <br>
   <strong>OneAPI-based DeepLearning Architecture</strong>  <strong></strong><br>
   Inter oneAPI competition: We designed an efficient matrix multiplication acceleration algorithm and neural network infrastructure based on Intel's oneAPI. Using our architecture, we have implemented quality detection for red wine.
   Collaborated with Shaojun Si (SDU)
   <br> <br>
-
-</div>
-
-
-<div class="section-title1">NOTES</div>
-<div class="content-box">
-
-
 </div>
 
 </body>
